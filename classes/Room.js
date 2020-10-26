@@ -1,7 +1,7 @@
 const routes = ['north', 'south', 'west', 'east']
 
 class Room {
-  constructor(room) {
+  constructor (room) {
     this.name = room.name
     this.id = room.id
     this.connectedRooms = {}
@@ -10,7 +10,7 @@ class Room {
     this._setConnectedRooms(room)
   }
 
-  _setConnectedRooms(room) {
+  _setConnectedRooms (room) {
     routes.forEach(route => {
       if (room[route]) {
         this.connectedRooms[route] = {
@@ -21,14 +21,14 @@ class Room {
     })
   }
 
-  _setObjects(objects) {
+  _setObjects (objects) {
     objects.forEach(object => {
       this.objects.push(object.name)
     })
   }
 
-  getObjectsByName(names) {
-    let objectsFound = []
+  getObjectsByName (names) {
+    const objectsFound = []
 
     names.forEach((object, i) => {
       if (this.objects.includes(object)) {
@@ -40,13 +40,13 @@ class Room {
     return objectsFound
   }
 
-  getNextRoomId() {
-    let route = Object.keys(this.connectedRooms).filter(route => !this.connectedRooms[route].visited)[0] 
+  getNextRoomId () {
+    const route = Object.keys(this.connectedRooms).filter(route => !this.connectedRooms[route].visited)[0]
 
     if (route) {
       this.connectedRooms[route].visited = true
     }
-    let nextRoom = route ? this.connectedRooms[route].room : false
+    const nextRoom = route ? this.connectedRooms[route].room : false
 
     return nextRoom
   }

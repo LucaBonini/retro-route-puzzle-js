@@ -3,9 +3,9 @@ const fs = require('fs')
 
 describe('outputs', () => {
   it('should output the route to collect the objects using input 1', () => {
-    const input = JSON.parse(fs.readFileSync(`data/input1.json`))
+    const input = JSON.parse(fs.readFileSync('data/input1.json'))
     const { map, startRoom, objects } = input
-    let rooms = setRooms(map.rooms)
+    const rooms = setRooms(map.rooms)
     const result = checkMe(rooms, startRoom, objects, [], [])
     expect(result).toEqual([
       'ID: 2, Room: Dining Room None',
@@ -18,9 +18,9 @@ describe('outputs', () => {
   })
 
   it('should output the route to collect object using input 2', () => {
-    const input = JSON.parse(fs.readFileSync(`data/input2.json`))
+    const input = JSON.parse(fs.readFileSync('data/input2.json'))
     const { map, startRoom, objects } = input
-    let rooms = setRooms(map.rooms)
+    const rooms = setRooms(map.rooms)
     const result = checkMe(rooms, startRoom, objects, [], [])
     expect(result).toEqual([
       'ID: 4, Room: Sun Room None',
