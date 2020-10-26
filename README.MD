@@ -21,13 +21,13 @@ inside this folder
 ## how to add new input
 
 create a json file in the `data` folder like newInput.json containing `map`, `startRoom` and `objects`
-`
+```
   {
     "map": {...},
     "startRoom": 3,
     "objects": ["Knife"]
   }
-`
+```
 
 then run
 
