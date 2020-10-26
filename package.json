@@ -1,0 +1,15 @@
+{
+  "name": "retro-route-puzzle-js",
+  "version": "1.0.0",
+  "description": "## Set execution permission to the scripts in the folder if needed",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.1"
+  }
+}
