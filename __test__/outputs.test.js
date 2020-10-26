@@ -1,7 +1,7 @@
 const { checkMe, setRooms } = require('../utils')
 const fs = require('fs')
 
-describe('output1', () => {
+describe('outputs', () => {
   it('should output the route to collect the objects using input 1', () => {
     const input = JSON.parse(fs.readFileSync(`data/input1.json`))
     const { map, startRoom, objects } = input
@@ -16,10 +16,8 @@ describe('output1', () => {
       'ID: 4, Room: Sun Room Potted Plant'
     ])
   })
-})
 
-describe('output2', () => {
-  it('should output the route to collect object input 2', () => {
+  it('should output the route to collect object using input 2', () => {
     const input = JSON.parse(fs.readFileSync(`data/input2.json`))
     const { map, startRoom, objects } = input
     let rooms = setRooms(map.rooms)

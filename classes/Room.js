@@ -46,9 +46,8 @@ class Room {
     if (route) {
       this.connectedRooms[route].visited = true
     }
-
     let nextRoom = route ? this.connectedRooms[route].room : false
-    
+
     return nextRoom
   }
 }
